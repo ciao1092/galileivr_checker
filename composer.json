@@ -3,12 +3,12 @@
         "tcdent/php-restclient": "0.1.8.4",
         "vlucas/phpdotenv": "^5.6"
     },
-    "require-dev": {
-        "bamarni/composer-bin-plugin": "^1.8"
-    },
     "config": {
         "allow-plugins": {
             "bamarni/composer-bin-plugin": true
         }
+    },
+    "require-dev": {
+        "bamarni/composer-bin-plugin": "^1.8"
     }
 }
