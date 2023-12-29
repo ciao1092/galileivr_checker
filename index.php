@@ -59,9 +59,9 @@ function Main()
 	$status = "\n" . "** 🤖 galileivr_checker REPORT **\n" . "\nThese are the users whose email does not belong to \"galileivr.org\":\n\n```\n";
 	$status .= $userlist;
 	$status .= "```\n";
-	$status .= "\n" . "* To stop receiving these messages, unfollow this account. *\n";
+	$status .= "\n" . "* To stop receiving these messages, unfollow this account. *\nCC: @admin";
 	if ($DRY_RUN == "false") {
-		$result = $api->post("api/v1/statuses", ['status' => $status, 'visibility' => "direct"]);
+		$result = $api->post("api/v1/statuses", ['status' => $status, 'visibility' => "private"]);
 		if ($result->info->http_code != 200)
 			throw new Exception('HTTP response does not indicate a successful status code.', $result->info->http_code);
 	} else {
